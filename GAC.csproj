@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Adicione este bloco para configurar o feed do NuGet da ASP.NET Core -->
+    <PackageSource Include="https://api.nuget.org/v3/index.json" />
+    <PackageSource Include="https://nuget.pkg.github.com/dotnet/aspnetcore/index.json">
+      <Credentials>
+        <Username>SEU_USERNAME</Username>
+        <ClearTextPassword>SEU_TOKEN</ClearTextPassword>
+      </Credentials>
+    </PackageSource>
+  </ItemGroup>
+  <ItemGroup>
+  <PackageSource Include="https://api.nuget.org/v3/index.json" />
+  <PackageSource Include="https://nuget.pkg.github.com/dotnet/aspnetcore/index.json">
+    <Credentials>
+      <Username>SEU_USERNAME</Username>
+      <ClearTextPassword>SEU_TOKEN</ClearTextPassword>
+    </Credentials>
+  </PackageSource>
+</ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+
+</Project>
