@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/inicial.css">
+    <title>Cadastro de Procedimentos | GAC</title>
+</head>
+<body>
+    <header class="page-header">
+        <a href="inicial.html" class="back-button">❮ Voltar</a>
+        <h1>Gestão de Procedimentos</h1>
+    </header>
+    <div class="page-actions-container">
+        <a href="combos.html" class="btn-link-styled">Gerenciar Combos →</a>
+    </div>
+    <main class="container">
+        <div class="form-container">
+            <h2>Novo Procedimento</h2>
+            <form id="procedimento-form">
+                <div class="form-group">
+                    <label for="nome">Nome do Procedimento</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="valor">Valor (R$)</label>
+                    <input type="number" id="valor" name="valor" step="0.01" min="0" required>
+                </div>
+                <button type="submit" class="btn-submit">Salvar</button>
+            </form>
+        </div>
+
+        <div class="list-container">
+            <h2>Procedimentos Cadastrados</h2>
+            <table id="procedimentos-table">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Valor</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Linhas de procedimentos serão adicionadas aqui via JS -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <script src="../js/procedimentos.js"></script>
+</body>
+</html>

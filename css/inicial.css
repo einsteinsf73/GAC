@@ -1,0 +1,444 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --corfundo: #3b78d5;
+    --fontpop: font-family: "Poppins", sans-serif;
+    --fontnotosans: font-family: "Noto Sans", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--corfundo);
+    font-family: "Poppins", sans-serif;
+}
+
+.box {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+}
+
+img {
+    cursor: pointer;
+}
+
+/* --- MENU PRINCIPAL --- */
+.clientes,
+.finan {
+    width: 400px; /* Aumentado de 300px */
+}
+
+.massagem {
+    width: 450px; /* Aumentado de 340px */
+}
+
+.logo {
+    width: 350px; /* Aumentado de 300px */
+    border-radius: 0px 0px 15px 15px;
+    position: relative;
+}
+
+.promo {
+    width: 90px; /* Aumentado de 60px */
+}
+
+/* Layout geral do menu (sem alterações) */
+.left {
+    display: flex;
+    padding-inline: 50px;
+}
+
+.mid {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-inline: 50px;
+    align-items: center;
+}
+
+.top {
+    height: 20%;
+} 
+
+.baixo {
+    height: 81%;
+    display: flex;
+    align-items: center;
+    margin-top: -73px;
+}   
+
+.direita {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 50px;
+}
+
+/* --- PÁGINAS INTERNAS (ESTILOS DE ACESSIBILIDADE) --- */
+
+.page-header {
+    background-color: #2c5d9c;
+    color: white;
+    padding: 1.5rem 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.page-header h1 {
+    margin: 0;
+    font-size: 2.5rem; /* Aumentado */
+}
+
+.back-button {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem; /* Aumentado */
+    font-weight: bold;
+}
+
+.back-button:hover {
+    text-decoration: underline;
+}
+
+.container {
+    display: flex;
+    padding: 2rem;
+    gap: 2rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.form-container, .list-container {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex-grow: 1;
+}
+
+.form-container {
+    flex-basis: 450px;
+}
+
+.list-container {
+    flex-basis: 600px;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 0.5rem;
+    font-size: 2.2rem; /* Aumentado */
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.8rem;
+    color: #555;
+    font-weight: bold;
+    font-size: 1.5rem; /* Aumentado */
+}
+
+.form-group input,
+select {
+    width: 100%;
+    padding: 1.2rem; /* Aumentado */
+    border: 2px solid #ccc; /* Borda mais espessa */
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1.5rem; /* Aumentado */
+    font-family: "Noto Sans", sans-serif;
+    background-color: white;
+}
+
+.btn-submit {
+    background-color: #0056b3; /* Cor atualizada */
+    color: white;
+    border: 2px solid white; /* Borda adicionada */
+    padding: 1.2rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.8rem;
+    font-weight: bold;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #004494; /* Hover atualizado */
+}
+
+#clientes-table,
+#procedimentos-table,
+#combos-table,
+#promocoes-table,
+#financeiro-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+#clientes-table th, #clientes-table td,
+#procedimentos-table th, #procedimentos-table td,
+#combos-table th, #combos-table td,
+#promocoes-table th, #promocoes-table td,
+#financeiro-table th, #financeiro-table td {
+    border: 1px solid #ddd;
+    padding: 1.2rem;
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+#clientes-table th,
+#procedimentos-table th,
+#combos-table th,
+#promocoes-table th,
+#financeiro-table th {
+    background-color: #f7f7f7;
+    font-weight: bold;
+}
+
+#clientes-table tbody tr:nth-child(even),
+#procedimentos-table tbody tr:nth-child(even),
+#combos-table tbody tr:nth-child(even),
+#promocoes-table tbody tr:nth-child(even),
+#financeiro-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#clientes-table tbody tr:hover,
+#procedimentos-table tbody tr:hover,
+#combos-table tbody tr:hover,
+#promocoes-table tbody tr:hover,
+#financeiro-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.action-buttons button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: #0056b3; /* Nova cor aplicada */
+    transition: color 0.3s;
+}
+
+.action-buttons button:hover {
+    color: #004494;
+}
+
+/* --- Estilos para Ações de Página (Gerenciar Combos) --- */
+
+.page-actions-container {
+    padding: 1rem 2.5rem 0 2.5rem;
+    background-color: var(--corfundo);
+}
+
+.btn-link-styled {
+    display: inline-block;
+    background-color: #0056b3;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-bottom: 1rem;
+    border: 2px solid white;
+}
+
+.btn-link-styled:hover {
+    background-color: #004494;
+    color: white;
+}
+
+/* Estilos para grupo de Checkbox (Página de Combos) */
+.checkbox-group {
+    max-height: 250px;
+    overflow-y: auto;
+    border: 2px solid #ccc;
+    padding: 1rem;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+.checkbox-group .checkbox-item {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.checkbox-group .checkbox-item label {
+    font-size: 1.5rem; /* Fonte grande */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-group .checkbox-item input[type="checkbox"] {
+    width: 25px; /* Checkbox maior */
+    height: 25px; /* Checkbox maior */
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+/* --- Estilos para a Página Financeira --- */
+
+/* Estilo para o select múltiplo */
+select[multiple] {
+    min-height: 150px; /* Altura maior para mostrar mais itens */
+    padding: 1rem;
+    font-size: 1.3rem;
+    font-family: "Noto Sans", sans-serif;
+    background-color: #f9f9f9;
+    border: 2px solid #ccc;
+}
+
+.form-container small {
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: -1rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+/* Para agrupar campos na mesma linha, como o desconto */
+.form-group-inline {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end;
+}
+
+.form-group-inline .form-group {
+    flex-grow: 1;
+    margin-bottom: 0;
+}
+
+/* Estilo para o display de total */
+.total-display {
+    background-color: #e9ecef;
+    border: 2px solid #dee2e6;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.total-display h3 {
+    margin: 0;
+    font-size: 2.2rem;
+    color: #333;
+}
+
+.total-display h3 span {
+    color: #28a745; /* Verde para o valor */
+    font-weight: bold;
+}
+
+/* Estilos para status na tabela */
+.status-pago {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 0.8rem;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.status-pendente {
+    background-color: #fff3cd;
+    color: #856404;
+    padding: 0.8rem;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+/* --- Estilos para Seção de Serviço Manual --- */
+
+.manual-entry-section {
+    border-top: 2px solid #eee;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.manual-entry-form {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.manual-entry-form input[type="text"] {
+    flex-basis: 50%;
+}
+.manual-entry-form input[type="number"] {
+    flex-basis: 25%;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    border: 2px solid white;
+    padding: 1.2rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.5rem; /* Um pouco menor que o submit principal */
+    font-weight: bold;
+    transition: background-color 0.3s;
+    flex-basis: 25%;
+    height: 100%;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+#manual-service-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1rem;
+}
+
+#manual-service-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+}
+
+#manual-service-list .item-name {
+    font-weight: bold;
+}
+
+#manual-service-list .item-remove-btn {
+    background: none;
+    border: none;
+    color: #dc3545;
+    font-size: 1.8rem;
+    cursor: pointer;
+    font-weight: bold;
+}

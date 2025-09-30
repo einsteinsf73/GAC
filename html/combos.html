@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/inicial.css">
+    <title>Gestão de Combos | GAC</title>
+</head>
+<body>
+    <header class="page-header">
+        <a href="procedimentos.html" class="back-button">❮ Voltar</a>
+        <h1>Gestão de Combos</h1>
+    </header>
+    <main class="container">
+        <div class="form-container">
+            <h2>Novo Combo</h2>
+            <form id="combo-form">
+                <div class="form-group">
+                    <label for="combo-nome">Nome do Combo</label>
+                    <input type="text" id="combo-nome" name="combo-nome" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Procedimentos</label>
+                    <div id="procedimentos-checkboxes" class="checkbox-group">
+                        <!-- Checkboxes serão inseridos aqui via JS -->
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="combo-valor">Valor Final do Combo (R$)</label>
+                    <input type="number" id="combo-valor" name="combo-valor" step="0.01" min="0" required>
+                </div>
+
+                <button type="submit" class="btn-submit">Salvar</button>
+            </form>
+        </div>
+
+        <div class="list-container">
+            <h2>Combos Cadastrados</h2>
+            <table id="combos-table">
+                <thead>
+                    <tr>
+                        <th>Nome do Combo</th>
+                        <th>Procedimentos</th>
+                        <th>Valor</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Linhas de combos serão adicionadas aqui via JS -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <script src="../js/combos.js"></script>
+</body>
+</html>

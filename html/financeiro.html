@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/inicial.css">
+    <title>Financeiro | GAC</title>
+</head>
+<body>
+    <header class="page-header">
+        <a href="inicial.html" class="back-button">❮ Voltar</a>
+        <h1>Controle Financeiro</h1>
+    </header>
+    <main class="container">
+        <div class="form-container">
+            <h2>Novo Lançamento</h2>
+            <form id="financeiro-form">
+                <div class="form-group">
+                    <label for="cliente-select">Cliente</label>
+                    <select id="cliente-select" name="cliente-select" required></select>
+                </div>
+
+                <div class="form-group">
+                    <label for="data">Data do Atendimento</label>
+                    <input type="date" id="data" name="data" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Procedimentos e Combos</label>
+                    <div id="servicos-checkboxes" class="checkbox-group">
+                        <!-- Checkboxes serão inseridos aqui via JS -->
+                    </div>
+                </div>
+
+                <div class="form-group manual-entry-section">
+                    <label>Serviço sem Cadastro</label>
+                    <div class="manual-entry-form">
+                        <input type="text" id="manual-descricao" placeholder="Descrição do serviço">
+                        <input type="number" id="manual-valor" placeholder="Valor (R$)" min="0" step="0.01">
+                        <button type="button" id="add-manual-service-btn" class="btn-secondary">Adicionar</button>
+                    </div>
+                    <ul id="manual-service-list">
+                        <!-- Itens manuais adicionados aparecerão aqui -->
+                    </ul>
+                </div>
+
+                <div class="form-group">
+                    <select id="promocao-select" name="promocao-select">
+                        <option value="">Nenhuma</option>
+                        <!-- Opções de promoção serão inseridas aqui via JS -->
+                    </select>
+                </div>
+
+                <div class="form-group-inline">
+                    <div class="form-group">
+                        <label for="desconto">Desconto</label>
+                        <input type="number" id="desconto" name="desconto" min="0" step="0.01" value="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="desconto-tipo">Tipo</label>
+                        <select id="desconto-tipo" name="desconto-tipo">
+                            <option value="valor">R$</option>
+                            <option value="percent">%</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="status-pagamento">Status</label>
+                    <select id="status-pagamento" name="status-pagamento">
+                        <option value="Pago">Pago</option>
+                        <option value="Pendente">Pendente</option>
+                    </select>
+                </div>
+
+                <div class="total-display">
+                    <h3>Total: <span id="valor-total">R$ 0,00</span></h3>
+                </div>
+
+                <button type="submit" class="btn-submit">Salvar Lançamento</button>
+            </form>
+        </div>
+
+        <div class="list-container">
+            <h2>Histórico de Lançamentos</h2>
+            <table id="financeiro-table">
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Cliente</th>
+                        <th>Serviços</th>
+                        <th>Valor Final</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Histórico será inserido aqui via JS -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <script src="../js/financeiro.js"></script>
+</body>
+</html>
